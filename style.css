@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif JP", serif;
+  font-weight: bold;
+  user-select: none;
+}
+
+.subsection {
+  width: 100%;
+  height: auto;
+  padding-top: 10vw;
+}
+
+.subsection-title {
+  width: 100%;
+  height: 20vw;
+  line-height: 20vw;
+  font-size: 12vw;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5vw;
+}
+
+.player-form {
+  padding: 0 10vw;
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 2vw;
+
+}
+
+.name-input-label {
+  font-weight: lighter;
+  font-size:6vw;
+  margin-bottom: 2vw;
+}
+
+.name-input {
+  height: 12vw;
+  line-height: 8vw;
+  padding: 2vw 2vw;
+  font-size:6vw;
+  border: none;
+  border-bottom:1px solid #000;
+  background-color: rgb(245,245,245);
+  transition:0.2s;
+}
+
+.name-input:focus {
+  outline:none;
+  background-color: rgb(250,250,250);
+}
+
+
+
+#submit-button {
+  display: none;
+}
+
+#submit-button-label {
+  line-height:16vw;
+  text-align: center;
+  font-size:6vw;
+  
+  display: block;
+  width:80vw;
+  height: 16vw;
+  border:1px solid #000;
+  outline: none;
+  margin: 0 10vw;
+  
+  transition: 0.1s;
+  color: #000;
+  background-color: #fff;
+}
+
+#submit-button-label.clicked {
+  background-color: #000;
+  color:#fff;
+}
+
+@media screen and (orientation: landscape) {
+  /* 横向きの場合のスタイル */
+  #submit-button-label {
+    position: relative;
+    margin-top: 10vw;
+  }
+}
+@media screen and (orientation: portrait) {
+  /* 縦向きの場合のスタイル */
+  #submit-button-label {
+    position:absolute;
+    bottom: 8vw;
+  }
+}
