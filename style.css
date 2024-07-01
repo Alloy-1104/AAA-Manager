@@ -9,6 +9,15 @@
   user-select: none;
 }
 
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-image:url("images/AAA.png");
+  background-repeat: no-repeat;
+  background-position: bottom -5vw right -30vw;
+  background-size:120vw;
+}
+
 .subsection {
   width: 100%;
   height: auto;
@@ -46,13 +55,14 @@
   font-size:6vw;
   border: none;
   border-bottom:1px solid #000;
-  background-color: rgb(245,245,245);
+  background-color: rgba(200,200,200,0.2);
   transition:0.2s;
+  backdrop-filter: blur(1vw);
 }
 
 .name-input:focus {
   outline:none;
-  background-color: rgb(250,250,250);
+  background-color: rgb(230,230,230,0.2);
 }
 
 
@@ -65,34 +75,115 @@
   line-height:16vw;
   text-align: center;
   font-size:6vw;
-  
   display: block;
   width:80vw;
   height: 16vw;
   border:1px solid #000;
   outline: none;
   margin: 0 10vw;
-  
   transition: 0.1s;
   color: #000;
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.5);
+  backdrop-filter: blur(1vw);
 }
 
-#submit-button-label.clicked {
-  background-color: #000;
-  color:#fff;
+
+.under-button {
+  display: none;
 }
+
+.under-button-label {
+  line-height:16vw;
+  text-align: center;
+  font-size:6vw;
+  display: block;
+  width:30vw;
+  height: 16vw;
+  border:1px solid #000;
+  outline: none;
+  transition: 0.1s;
+  color: #000;
+  background-color: rgba(255,255,255,0.5);
+  backdrop-filter: blur(1vw);
+}
+
+
+#under-button-wrapper {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 10vw;
+}
+
+.result-input-table {
+  margin: 0 10vw;
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 2vw;
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+#result-table {
+  border-collapse: collapse;
+  backdrop-filter: blur(1vw);
+}
+
+#result-table > tbody > tr {
+  height: 16vw;
+  font-size:4vw;
+}
+
+#result-table > tbody > tr > th {
+  width: 50%;
+  border-right: 1px solid #000;
+  background-color: rgba(255,255,255,0.5);
+}
+
+#result-table > tbody > tr > td {
+  width: 50%;
+  background-color: rgba(255,255,255,0.5);
+  
+}
+
+#result-table > tbody > tr > td > label {
+  display: block;
+  width: 100%;
+  height: 16vw;
+  line-height: 16vw;
+  text-align: center;
+  font-size:8vw;
+}
+
+.result-checkbox {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+.clicked {
+  background-color: #000 !important;
+  color:#fff !important;
+}
+
 
 @media screen and (orientation: landscape) {
   /* 横向きの場合のスタイル */
-  #submit-button-label {
+  #submit-button-label, #under-button-wrapper {
     position: relative;
     margin-top: 10vw;
   }
 }
 @media screen and (orientation: portrait) {
   /* 縦向きの場合のスタイル */
-  #submit-button-label {
+  #submit-button-label, #under-button-wrapper {
     position:absolute;
     bottom: 8vw;
   }

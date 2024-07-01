@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A.A.A. Manager</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="page" id="register" style="display: block;">
     <div class="subsection">
@@ -28,11 +30,42 @@
       </div>
     </div>
     <input id="submit-button" type="button" value="submit">
-    <label for="submit-button" id="submit-button-label">> Submit</label>
+    <label for="submit-button" id="submit-button-label">Submit ></label>
   </div>
   <div class="page" id="game" style="display: none;">
-
+    <div class="subsection">
+      <div class="subsection-title" id="game-name">Game</div>
+      <div class="result-input-table">
+        <table id="result-table">
+          <tbody>
+            <tr id="player-1">
+              <th id="player-1-name">name</th>
+              <td><input class="result-checkbox" id="player-1-checkbox" type="checkbox"><label id="player-1-checkbox-label" for="player-1-checkbox">Lose</label></td>
+            </tr>
+            <tr id="player-2">
+              <th id="player-2-name">name</th>
+              <td><input class="result-checkbox" id="player-2-checkbox" type="checkbox"><label id="player-2-checkbox-label" for="player-2-checkbox">Lose</label></td>
+            </tr>
+            <tr id="player-3">
+              <th id="player-3-name">name</th>
+              <td><input class="result-checkbox" id="player-3-checkbox" type="checkbox"><label id="player-3-checkbox-label" for="player-3-checkbox">Lose</label></td>
+            </tr>
+            <tr id="player-4">
+              <th id="player-4-name">name</th>
+              <td><input class="result-checkbox" id="player-4-checkbox" type="checkbox"><label id="player-4-checkbox-label" for="player-4-checkbox">Lose</label></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="under-button-wrapper">
+      <input class="under-button" id="back-button" value="back" type="button">
+      <label for="back-button" id="back-button-label" class="under-button-label">&lt; Back</label>
+      <input class="under-button" id="next-button" value="next" type="button">
+      <label for="next-button" id="next-button-label" class="under-button-label">Next &gt;</label>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>
