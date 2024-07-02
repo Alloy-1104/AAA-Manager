@@ -21,7 +21,6 @@ submit_button.addEventListener("click", () => {
       game_index = 0;
       set_game();
       set_page(page);
-      console.log(player_data);
     }, 100)
   }, 100)
 })
@@ -74,7 +73,7 @@ const player_4_checkbox = document.getElementById("player-4-checkbox");
 
 const result_table = document.getElementById("result-table");
 
-result_table.addEventListener("click", sync_table_to_player_data);
+result_table.addEventListener("click", () => { sync_table_to_player_data(); sync_score_ranking() });
 
 function sync_table_to_player_data() {
   if (player_1_checkbox.checked) {
@@ -130,6 +129,25 @@ function sync_player_data_to_table() {
   }
 }
 
+const ranking_table = document.getElementById("current-ranking");
+const ranking_rows = ranking_table.children;
+
+function sync_score_ranking() {
+  let scores = [];
+  player_data.forEach((data) => {
+    data.score = calc_score(data);
+    scores[scores.length] = data.score;
+  })
+  let temp_player_data = player_data;
+  temp_player_data.sort((a,b) => {
+    return b.score - a.score;
+  });
+  for (let i = 0; i < 4; i++ ) {
+    ranking_rows[i].children[1].innerHTML = temp_player_data[i].name;
+    ranking_rows[i].children[2].innerHTML = temp_player_data[i].score;
+  }
+}
+
 const back_button_label = document.getElementById("back-button-label");
 
 back_button_label.addEventListener("click", () => {
@@ -168,4 +186,35 @@ function set_game() {
   game_label.innerHTML = games_title[game_index];
   sync_player_data_to_table();
   sync_table_to_player_data();
+  sync_score_ranking();
+}
+
+
+
+function calc_score(data) {
+  const multiplier = 1.5;
+  const base = 160;
+  const bonus = [23, 43, 47, 83]
+  let score = base;
+  if (data.roulette) {
+    score += bonus[0];
+    score *= multiplier;
+  }
+  if (data.poker) {
+    score += bonus[1];
+    score *= multiplier;
+  }
+  if (data.black_jack) {
+    score += bonus[2];
+    score *= multiplier;
+  }
+  if (data.darts) {
+    score += bonus[3];
+    score *= multiplier;
+  }
+  if (1000 <= score) {
+    return 1000;
+  } else {
+    return Math.floor(score);
+  }
 }

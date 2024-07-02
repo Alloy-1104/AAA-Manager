@@ -12,7 +12,7 @@
 .page {
   width: 100vw;
   height: 100vh;
-  background-image:url("images/roulette.png");
+  background-image:url("images/poker.png");
   background-repeat: no-repeat;
   background-position: bottom -5vw right -30vw;
   background-size:120vw;
@@ -21,17 +21,25 @@
 .subsection {
   width: 100%;
   height: auto;
-  padding-top: 10vw;
 }
 
 .subsection-title {
   width: 100%;
-  height: 20vw;
-  line-height: 20vw;
+  height: 16vw;
+  line-height: 16vw;
   font-size: 12vw;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 5vw;
+  margin-bottom: 2vw;
+}
+
+.subsection-subtitle {
+  width: 100%;
+  height: 12vw;
+  line-height: 12vw;
+  font-size: 8vw;
+  text-align: center;
+  font-weight: bold;
 }
 
 .player-form {
@@ -55,17 +63,15 @@
   font-size:6vw;
   border: none;
   border-bottom:1px solid #000;
-  background-color: rgba(200,200,200,0.2);
+  background-color: rgba(240,240,240,0.7);
   transition:0.2s;
   backdrop-filter: blur(1vw);
 }
 
 .name-input:focus {
   outline:none;
-  background-color: rgb(230,230,230,0.2);
+  background-color: rgb(250,250,250,0.7);
 }
-
-
 
 #submit-button {
   display: none;
@@ -160,13 +166,41 @@
   display: none;
 }
 
+#current-ranking {
+  margin: 0 10vw;
+  list-style:none;
+}
 
+#current-ranking > li {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #000;
+  height: 12vw;
+  padding-top:5vw;
+  padding-bottom: 1vw;
+  line-height: 6vw;
+  position:relative;
+}
 
+#current-ranking > li > .place-label {
+  width: 15%;
+  text-align: center;
+  font-size: 4vw;
+}
 
+#current-ranking > li > .ranking-name{
+  width: 50%;
+  padding-left: 5%;
+  text-align: left;
+  font-size: 5vw;
+}
 
-
-
-
+#current-ranking > li > .ranking-score {
+  width: 45%;
+  padding-right: 5%;
+  text-align: right;
+  font-size: 5vw;
+}
 
 .clicked {
   background-color: #000 !important;
