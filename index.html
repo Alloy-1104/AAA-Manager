@@ -40,19 +40,23 @@
           <tbody>
             <tr id="player-1">
               <th id="player-1-name">name</th>
-              <td><input class="result-checkbox" id="player-1-checkbox" type="checkbox"><label id="player-1-checkbox-label" for="player-1-checkbox">Lose</label></td>
+              <td><input class="result-checkbox" id="player-1-checkbox" type="checkbox"><label
+                  id="player-1-checkbox-label" for="player-1-checkbox">Lose</label></td>
             </tr>
             <tr id="player-2">
               <th id="player-2-name">name</th>
-              <td><input class="result-checkbox" id="player-2-checkbox" type="checkbox"><label id="player-2-checkbox-label" for="player-2-checkbox">Lose</label></td>
+              <td><input class="result-checkbox" id="player-2-checkbox" type="checkbox"><label
+                  id="player-2-checkbox-label" for="player-2-checkbox">Lose</label></td>
             </tr>
             <tr id="player-3">
               <th id="player-3-name">name</th>
-              <td><input class="result-checkbox" id="player-3-checkbox" type="checkbox"><label id="player-3-checkbox-label" for="player-3-checkbox">Lose</label></td>
+              <td><input class="result-checkbox" id="player-3-checkbox" type="checkbox"><label
+                  id="player-3-checkbox-label" for="player-3-checkbox">Lose</label></td>
             </tr>
             <tr id="player-4">
               <th id="player-4-name">name</th>
-              <td><input class="result-checkbox" id="player-4-checkbox" type="checkbox"><label id="player-4-checkbox-label" for="player-4-checkbox">Lose</label></td>
+              <td><input class="result-checkbox" id="player-4-checkbox" type="checkbox"><label
+                  id="player-4-checkbox-label" for="player-4-checkbox">Lose</label></td>
             </tr>
           </tbody>
         </table>
@@ -61,10 +65,26 @@
     <div class="subsection">
       <div class="subsection-subtitle">Ranking</div>
       <ol id="current-ranking">
-        <li><div class="place-label">1st.</div><div class="ranking-name">Player 1</div><div class="ranking-score">1000</div></li>
-        <li><div class="place-label">2nd.</div><div class="ranking-name">Player 2</div><div class="ranking-score">800</div></li>
-        <li><div class="place-label">3rd.</div><div class="ranking-name">Player 3</div><div class="ranking-score">400</div></li>
-        <li><div class="place-label">4th.</div><div class="ranking-name">Player 4</div><div class="ranking-score">200</div></li>
+        <li>
+          <div class="place-label">1st.</div>
+          <div class="ranking-name">Player 1</div>
+          <div class="ranking-score">1000</div>
+        </li>
+        <li>
+          <div class="place-label">2nd.</div>
+          <div class="ranking-name">Player 2</div>
+          <div class="ranking-score">800</div>
+        </li>
+        <li>
+          <div class="place-label">3rd.</div>
+          <div class="ranking-name">Player 3</div>
+          <div class="ranking-score">400</div>
+        </li>
+        <li>
+          <div class="place-label">4th.</div>
+          <div class="ranking-name">Player 4</div>
+          <div class="ranking-score">200</div>
+        </li>
       </ol>
     </div>
     <div id="under-button-wrapper">
@@ -72,6 +92,35 @@
       <label for="back-button" id="back-button-label" class="under-button-label">&lt; Back</label>
       <input class="under-button" id="next-button" value="next" type="button">
       <label for="next-button" id="next-button-label" class="under-button-label">Next &gt;</label>
+    </div>
+  </div>
+  <div class="page" id="ranking" style="display: none;">
+    <div class="subsection">
+      <div class="subsection-title">Ranking</div>
+      <ol id="ranking-table">
+        <li>
+          <div class="place-label">1st.</div>
+          <div class="ranking-name">Player 1</div>
+          <div class="ranking-score">1000</div>
+        </li>
+        <li>
+          <div class="place-label">2nd.</div>
+          <div class="ranking-name">Player 2</div>
+          <div class="ranking-score">800</div>
+        </li>
+        <li>
+          <div class="place-label">3rd.</div>
+          <div class="ranking-name">Player 3</div>
+          <div class="ranking-score">400</div>
+        </li>
+        <li>
+          <div class="place-label">4th.</div>
+          <div class="ranking-name">Player 4</div>
+          <div class="ranking-score">200</div>
+        </li>
+      </ol>
+      <input type="button" id="ranking-back-button" class="under-button">
+      <label for="ranking-back-button" id="ranking-back-button-label" class="under-button-label">&lt; Back</label>
     </div>
   </div>
   <script src="script.js"></script>

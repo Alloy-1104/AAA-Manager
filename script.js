@@ -138,7 +138,7 @@ function sync_score_ranking() {
     data.score = calc_score(data);
     scores[scores.length] = data.score;
   })
-  let temp_player_data = player_data;
+  let temp_player_data = JSON.parse(JSON.stringify(player_data));
   temp_player_data.sort((a,b) => {
     return b.score - a.score;
   });
@@ -173,7 +173,9 @@ next_button_label.addEventListener("click", () => {
   setTimeout(() => {
     next_button_label.classList.remove("clicked");
     if (game_index == 3) {
-      //
+      sync_ranking_table();
+      page = "ranking";
+      set_page(page);
     } else {
       game_index++;
       set_game();
@@ -217,4 +219,23 @@ function calc_score(data) {
   } else {
     return Math.floor(score);
   }
+}
+
+
+const ranking_back_button_label = document.getElementById("ranking-back-button-label");
+
+ranking_back_button_label.addEventListener("click", () => {
+  ranking_back_button_label.classList.add("clicked");
+  setTimeout(() => {
+    ranking_back_button_label.classList.remove("clicked");
+    page = "game";
+    sync_ranking_table();
+    set_page(page);
+  }, 100);
+});
+
+function sync_ranking_table() {
+  const ranking_table = document.getElementById("ranking-table");
+  const ranking_table_small = document.getElementById("current-ranking");
+  ranking_table.innerHTML = ranking_table_small.innerHTML;
 }

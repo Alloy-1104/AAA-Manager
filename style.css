@@ -12,10 +12,10 @@
 .page {
   width: 100vw;
   height: 100vh;
-  background-image:url("images/poker.png");
+  background-image: url("images/poker.png");
   background-repeat: no-repeat;
   background-position: bottom -5vw right -30vw;
-  background-size:120vw;
+  background-size: 120vw;
 }
 
 .subsection {
@@ -44,7 +44,7 @@
 
 .player-form {
   padding: 0 10vw;
-  display:flex;
+  display: flex;
   flex-direction: column;
   margin-bottom: 2vw;
 
@@ -52,7 +52,7 @@
 
 .name-input-label {
   font-weight: lighter;
-  font-size:6vw;
+  font-size: 6vw;
   margin-bottom: 2vw;
 }
 
@@ -60,17 +60,17 @@
   height: 12vw;
   line-height: 8vw;
   padding: 2vw 2vw;
-  font-size:6vw;
+  font-size: 6vw;
   border: none;
-  border-bottom:1px solid #000;
-  background-color: rgba(240,240,240,0.7);
-  transition:0.2s;
+  border-bottom: 1px solid #000;
+  background-color: rgba(240, 240, 240, 0.7);
+  transition: 0.2s;
   backdrop-filter: blur(1vw);
 }
 
 .name-input:focus {
-  outline:none;
-  background-color: rgb(250,250,250,0.7);
+  outline: none;
+  background-color: rgb(250, 250, 250, 0.7);
 }
 
 #submit-button {
@@ -78,18 +78,18 @@
 }
 
 #submit-button-label {
-  line-height:16vw;
+  line-height: 16vw;
   text-align: center;
-  font-size:6vw;
+  font-size: 6vw;
   display: block;
-  width:80vw;
+  width: 80vw;
   height: 16vw;
-  border:1px solid #000;
+  border: 1px solid #000;
   outline: none;
   margin: 0 10vw;
   transition: 0.1s;
   color: #000;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(1vw);
 }
 
@@ -99,17 +99,17 @@
 }
 
 .under-button-label {
-  line-height:16vw;
+  line-height: 16vw;
   text-align: center;
-  font-size:6vw;
+  font-size: 6vw;
   display: block;
-  width:30vw;
+  width: 30vw;
   height: 16vw;
-  border:1px solid #000;
+  border: 1px solid #000;
   outline: none;
   transition: 0.1s;
   color: #000;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(1vw);
 }
 
@@ -124,7 +124,7 @@
 
 .result-input-table {
   margin: 0 10vw;
-  display:flex;
+  display: flex;
   flex-direction: column;
   margin-bottom: 2vw;
   border: 1px solid #000;
@@ -136,30 +136,30 @@
   backdrop-filter: blur(1vw);
 }
 
-#result-table > tbody > tr {
+#result-table>tbody>tr {
   height: 16vw;
-  font-size:4vw;
+  font-size: 4vw;
 }
 
-#result-table > tbody > tr > th {
+#result-table>tbody>tr>th {
   width: 50%;
   border-right: 1px solid #000;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-#result-table > tbody > tr > td {
+#result-table>tbody>tr>td {
   width: 50%;
-  background-color: rgba(255,255,255,0.5);
-  
+  background-color: rgba(255, 255, 255, 0.5);
+
 }
 
-#result-table > tbody > tr > td > label {
+#result-table>tbody>tr>td>label {
   display: block;
   width: 100%;
   height: 16vw;
   line-height: 16vw;
   text-align: center;
-  font-size:8vw;
+  font-size: 8vw;
 }
 
 .result-checkbox {
@@ -168,34 +168,34 @@
 
 #current-ranking {
   margin: 0 10vw;
-  list-style:none;
+  list-style: none;
 }
 
-#current-ranking > li {
+#current-ranking>li {
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid #000;
   height: 12vw;
-  padding-top:5vw;
+  padding-top: 5vw;
   padding-bottom: 1vw;
   line-height: 6vw;
-  position:relative;
+  position: relative;
 }
 
-#current-ranking > li > .place-label {
+#current-ranking>li>.place-label {
   width: 15%;
   text-align: center;
   font-size: 4vw;
 }
 
-#current-ranking > li > .ranking-name{
+#current-ranking>li>.ranking-name {
   width: 50%;
   padding-left: 5%;
   text-align: left;
   font-size: 5vw;
 }
 
-#current-ranking > li > .ranking-score {
+#current-ranking>li>.ranking-score {
   width: 45%;
   padding-right: 5%;
   text-align: right;
@@ -204,21 +204,81 @@
 
 .clicked {
   background-color: #000 !important;
-  color:#fff !important;
+  color: #fff !important;
+}
+
+#ranking-back-button-label {
+  line-height: 16vw;
+  text-align: center;
+  font-size: 6vw;
+  display: block;
+  width: 80vw;
+  height: 16vw;
+  border: 1px solid #000;
+  outline: none;
+  margin: 0 10vw;
+  transition: 0.1s;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(1vw);
+}
+
+#ranking-table {
+  margin: 0 10vw;
+  list-style: none;
+}
+
+#ranking-table>li {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #000;
+  height: 20vw;
+  padding-top: 8vw;
+  padding-bottom: 2w;
+  line-height: 10vw;
+  position: relative;
+}
+
+#ranking-table>li>.place-label {
+  width: 20%;
+  text-align: center;
+  font-size: 6vw;
+}
+
+#ranking-table>li>.ranking-name {
+  width: 50%;
+  padding-left: 5%;
+  text-align: left;
+  font-size: 5vw;
+}
+
+#ranking-table>li>.ranking-score {
+  width: 25%;
+  padding-right: 5%;
+  text-align: right;
+  font-size: 6vw;
 }
 
 
+
 @media screen and (orientation: landscape) {
+
   /* 横向きの場合のスタイル */
-  #submit-button-label, #under-button-wrapper {
+  #submit-button-label,
+  #under-button-wrapper,
+  #ranking-back-button-label {
     position: relative;
     margin-top: 10vw;
   }
 }
+
 @media screen and (orientation: portrait) {
+
   /* 縦向きの場合のスタイル */
-  #submit-button-label, #under-button-wrapper {
-    position:absolute;
+  #submit-button-label,
+  #under-button-wrapper,
+  #ranking-back-button-label {
+    position: absolute;
     bottom: 8vw;
   }
 }
