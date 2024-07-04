@@ -4,8 +4,8 @@ const pages = document.getElementsByClassName("page");
 var page = "register";
 var player_data = [{}, {}, {}, {}]
 var current_game;
-var games = ["roulette", "poker", "black_jack", "darts"];
-var games_title = ["Roulette", "Poker", "Black Jack", "Darts"]
+var games = ["poker", "black_jack", "roulette", "darts"];
+var games_title = ["Poker", "Black Jack", "Roulette", "Darts"]
 var game_index;
 
 submit_button.addEventListener("click", () => {
@@ -139,10 +139,10 @@ function sync_score_ranking() {
     scores[scores.length] = data.score;
   })
   let temp_player_data = JSON.parse(JSON.stringify(player_data));
-  temp_player_data.sort((a,b) => {
+  temp_player_data.sort((a, b) => {
     return b.score - a.score;
   });
-  for (let i = 0; i < 4; i++ ) {
+  for (let i = 0; i < 4; i++) {
     ranking_rows[i].children[1].innerHTML = temp_player_data[i].name;
     ranking_rows[i].children[2].innerHTML = temp_player_data[i].score;
   }
