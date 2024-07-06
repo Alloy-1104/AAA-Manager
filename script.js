@@ -2,7 +2,7 @@ const submit_button = document.getElementById("submit-button-label");
 const pages = document.getElementsByClassName("page");
 
 var page = "register";
-var player_data = [{}, {}, {}, {}]
+var player_data = [{}, {}, {}, {}, {}]
 var current_game;
 var games = ["poker", "black_jack", "roulette", "darts"];
 var games_title = ["Poker", "Black Jack", "Roulette", "Darts"]
@@ -27,7 +27,7 @@ submit_button.addEventListener("click", () => {
 
 function get_player_data() {
   const player_name_input_elms = document.getElementsByClassName("name-input");
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 5; i++) {
     if (player_name_input_elms[i].value) {
       player_data[i].name = player_name_input_elms[i].value;
     } else {
@@ -53,23 +53,27 @@ const table_head_player_1 = document.getElementById("player-1-name");
 const table_head_player_2 = document.getElementById("player-2-name");
 const table_head_player_3 = document.getElementById("player-3-name");
 const table_head_player_4 = document.getElementById("player-4-name");
+const table_head_player_5 = document.getElementById("player-5-name");
 
 function set_player_name() {
   table_head_player_1.innerHTML = player_data[0].name;
   table_head_player_2.innerHTML = player_data[1].name;
   table_head_player_3.innerHTML = player_data[2].name;
   table_head_player_4.innerHTML = player_data[3].name;
+  table_head_player_5.innerHTML = player_data[4].name;
 }
 
 const player_1_checkbox_label = document.getElementById("player-1-checkbox-label");
 const player_2_checkbox_label = document.getElementById("player-2-checkbox-label");
 const player_3_checkbox_label = document.getElementById("player-3-checkbox-label");
 const player_4_checkbox_label = document.getElementById("player-4-checkbox-label");
+const player_5_checkbox_label = document.getElementById("player-5-checkbox-label");
 
 const player_1_checkbox = document.getElementById("player-1-checkbox");
 const player_2_checkbox = document.getElementById("player-2-checkbox");
 const player_3_checkbox = document.getElementById("player-3-checkbox");
 const player_4_checkbox = document.getElementById("player-4-checkbox");
+const player_5_checkbox = document.getElementById("player-5-checkbox");
 
 const result_table = document.getElementById("result-table");
 
@@ -104,6 +108,13 @@ function sync_table_to_player_data() {
     player_4_checkbox_label.innerHTML = "Lose";
     player_data[3][current_game] = false;
   }
+  if (player_5_checkbox.checked) {
+    player_5_checkbox_label.innerHTML = "Win";
+    player_data[4][current_game] = true;
+  } else {
+    player_5_checkbox_label.innerHTML = "Lose";
+    player_data[4][current_game] = false;
+  }
 }
 
 function sync_player_data_to_table() {
@@ -127,6 +138,11 @@ function sync_player_data_to_table() {
   } else {
     player_4_checkbox.checked = false;
   }
+  if (player_data[4][current_game]) {
+    player_5_checkbox.checked = player_data[4][current_game];
+  } else {
+    player_5_checkbox.checked = false;
+  }
 }
 
 const ranking_table = document.getElementById("current-ranking");
@@ -142,7 +158,7 @@ function sync_score_ranking() {
   temp_player_data.sort((a, b) => {
     return b.score - a.score;
   });
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 5; i++) {
     ranking_rows[i].children[1].innerHTML = temp_player_data[i].name;
     ranking_rows[i].children[2].innerHTML = temp_player_data[i].score;
   }
