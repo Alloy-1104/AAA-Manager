@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>A.A.A. Manager</title>
+</head>
+
+<body>
+  <div id="page-list">
+    <div class="page" id="registration" style="display: none;">
+      <div id="registration-form" class="section">
+        <div id="registration-title" class="section-title">Register</div>
+        <div id="registration-input">
+          <div class="wrapper">
+            <label for="player-counter-radio-1" class="player-counter-radio-label">1<input type="radio"
+                name="player-counter" id="player-counter-radio-1" class="player-counter-radio" value="1"></label>
+            <div class="wrapper" id="name-input-wrapper">
+              <label for="player-1-input" class="name-input-label">Player 1</label>
+              <input id="player-1-input" class="name-input" type="text" placeholder="プレイヤー1">
+            </div>
+          </div>
+          <div class="wrapper">
+            <label for="player-counter-radio-2" class="player-counter-radio-label">2<input type="radio"
+                name="player-counter" id="player-counter-radio-2" class="player-counter-radio" value="2"></label>
+            <div class="wrapper" id="name-input-wrapper">
+              <label for="player-2-input" class="name-input-label">Player 2</label>
+              <input id="player-2-input" class="name-input" type="text" placeholder="プレイヤー2">
+            </div>
+          </div>
+          <div class="wrapper">
+            <label for="player-counter-radio-3" class="player-counter-radio-label">3<input type="radio"
+                name="player-counter" id="player-counter-radio-3" class="player-counter-radio" value="3"></label>
+            <div class="wrapper" id="name-input-wrapper">
+              <label for="player-3-input" class="name-input-label">Player 3</label>
+              <input id="player-3-input" class="name-input" type="text" placeholder="プレイヤー3">
+            </div>
+          </div>
+          <div class="wrapper">
+            <label for="player-counter-radio-4" class="player-counter-radio-label">4<input type="radio"
+                name="player-counter" id="player-counter-radio-4" class="player-counter-radio" value="4"
+                checked></label>
+            <div class="wrapper" id="name-input-wrapper">
+              <label for="player-4-input" class="name-input-label">Player 4</label>
+              <input id="player-4-input" class="name-input" type="text" placeholder="プレイヤー4">
+            </div>
+          </div>
+          <div class="wrapper">
+            <label for="player-counter-radio-5" class="player-counter-radio-label">5<input type="radio"
+                name="player-counter" id="player-counter-radio-5" class="player-counter-radio" value="5"></label>
+            <div class="wrapper" id="name-input-wrapper">
+              <label for="player-5-input" class="name-input-label">Player 5</label>
+              <input id="player-5-input" class="name-input" type="text" placeholder="プレイヤー5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page" id="game-list" style="display: none;">
+      <div class="section" id="game-list-wrapper">
+        <div id="poker-selection" value="0">Poker</div>
+        <div id="black-jack-selection" value="1">Black Jack</div>
+        <div id="darts-selection" value="2">Darts</div>
+        <div id="roulette-selection" value="3">Roulette</div>
+      </div>
+    </div>
+    <div class="page" id="game-scoring" style="display: none;">
+      <div class="section">
+        <div id="game-title" class="section-title">Game Name</div>
+        <div id="scoring-form">
+          <div class="scoring-form-row">
+            <div class="scoring-form-head" id="player-1-name">Name</div><label id="player-1-checkbox-label"
+              class="scoring-form-checkbox-label" for="player-1-checkbox"><input class="scoring-form-checkbox"
+                id="player-1-checkbox" type="checkbox">Lose</label>
+          </div>
+          <div class="scoring-form-row">
+            <div class="scoring-form-head" id="player-2-name">Name</div><label id="player-2-checkbox-label"
+              class="scoring-form-checkbox-label" for="player-2-checkbox"><input class="scoring-form-checkbox"
+                id="player-2-checkbox" type="checkbox">Lose</label>
+          </div>
+          <div class="scoring-form-row">
+            <div class="scoring-form-head" id="player-3-name">Name</div><label id="player-3-checkbox-label"
+              class="scoring-form-checkbox-label" for="player-3-checkbox"><input class="scoring-form-checkbox"
+                id="player-3-checkbox" type="checkbox">Lose</label>
+          </div>
+          <div class="scoring-form-row">
+            <div class="scoring-form-head" id="player-4-name">Name</div><label id="player-4-checkbox-label"
+              class="scoring-form-checkbox-label" for="player-4-checkbox"><input class="scoring-form-checkbox"
+                id="player-4-checkbox" type="checkbox">Lose</label>
+          </div>
+          <div class="scoring-form-row">
+            <div class="scoring-form-head" id="player-5-name">Name</div><label id="player-5-checkbox-label"
+              class="scoring-form-checkbox-label" for="player-5-checkbox"><input class="scoring-form-checkbox"
+                id="player-5-checkbox" type="checkbox">Lose</label>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div id="ranking-preview-title" class="section-title">Ranking prev.</div>
+        <div id="ranking-preview">
+          <div class="ranking-preview-row">
+            <div class="ranking-preview-place">1st.</div>
+            <div class="ranking-preview-name">Name</div>
+            <div class="ranking-preview-score">1000</div>
+          </div>
+          <div class="ranking-preview-row">
+            <div class="ranking-preview-place">2nd.</div>
+            <div class="ranking-preview-name">Name</div>
+            <div class="ranking-preview-score">800</div>
+          </div>
+          <div class="ranking-preview-row">
+            <div class="ranking-preview-place">3rd.</div>
+            <div class="ranking-preview-name">Name</div>
+            <div class="ranking-preview-score">600</div>
+          </div>
+          <div class="ranking-preview-row">
+            <div class="ranking-preview-place">4th.</div>
+            <div class="ranking-preview-name">Name</div>
+            <div class="ranking-preview-score">400</div>
+          </div>
+          <div class="ranking-preview-row">
+            <div class="ranking-preview-place">5th.</div>
+            <div class="ranking-preview-name">Name</div>
+            <div class="ranking-preview-score">200</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page" id="ranking" style="display: none;">
+      <div class="section">
+        <div class="section-title">Ranking</div>
+        <div id="ranking">
+          <div class="ranking-row">
+            <div class="ranking-place">1st.</div>
+            <div class="ranking-name">Name</div>
+            <div class="ranking-score">1000</div>
+          </div>
+          <div class="ranking-row">
+            <div class="ranking-place">2nd.</div>
+            <div class="ranking-name">Name</div>
+            <div class="ranking-score">800</div>
+          </div>
+          <div class="ranking-row">
+            <div class="ranking-place">3rd.</div>
+            <div class="ranking-name">Name</div>
+            <div class="ranking-score">600</div>
+          </div>
+          <div class="ranking-row">
+            <div class="ranking-place">4th.</div>
+            <div class="ranking-name">Name</div>
+            <div class="ranking-score">400</div>
+          </div>
+          <div class="ranking-row">
+            <div class="ranking-place">5th.</div>
+            <div class="ranking-name">Name</div>
+            <div class="ranking-score">200</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer-button">
+    <div class="wide-button" id="register-button">Submit ></div>
+    <div class="left-button" id="slot-game-button">ミニゲーム</div>
+    <div class="wide-button" id="back-to-list-button">Back</div>
+    <div class="right-button" id="go-to-ranking-button">Ranking</div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
