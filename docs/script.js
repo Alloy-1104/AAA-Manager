@@ -117,6 +117,7 @@ footer_back_to_list_button.addEventListener("click", () => {
 
 // Go to Ranking
 var long_tap;
+var undone = false
 footer_go_to_ranking_button.addEventListener("pointerdown", () => {
   const ranking_interval_id = setTimeout(() => {
     if (done_count == 4) {
@@ -125,15 +126,18 @@ footer_go_to_ranking_button.addEventListener("pointerdown", () => {
       submit_score();
     } else {
       alert("まだすべてのゲームが終わっていません。");
+      undone = true;
     }
-
   }, 1000)
-  document.addEventListener("pointerup", () => {
+
+  const ranking_up_interval_id = document.addEventListener("pointerup", () => {
     clearInterval(ranking_interval_id);
-    if (page_index != 3) {
+    if (page_index != 3 && !undone) {
       alert("長押しでランキングへ移ります。")
     }
   }, { once: true });
+  //if (undone) clearInterval(ranking_up_interval_id);
+
 });
 
 // Restart
