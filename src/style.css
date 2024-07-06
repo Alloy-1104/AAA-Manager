@@ -79,7 +79,7 @@ input[type="checkbox"] {
 .name-input {
   height: 10vw;
   line-height: 10vw;
-  font-size: 6vw;
+  font-size: 5vw;
   padding-left:2vw;
   border: none;
   border-bottom: 1px solid #000;
@@ -122,7 +122,7 @@ input[type="checkbox"] {
   margin: 2vw 0;
   text-align: center;
   line-height: 24vw;
-  font-size: 8vw;
+  font-size: 6vw;
 }
 
 /* Scoring Form */
