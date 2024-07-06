@@ -65,6 +65,11 @@
         <div id="darts-selection" value="2">ダーツ</div>
         <div id="roulette-selection" value="3">ルーレット</div>
       </div>
+      <div class="section" id="done-note" style="display: none;">
+        <div class="section-title">
+          <small>これですべてのゲームが<br>終了しました。</small>
+        </div>
+      </div>
     </div>
     <div class="page" id="game-scoring" style="display: none;">
       <div class="section">
@@ -72,34 +77,34 @@
         <div id="scoring-form">
           <div class="scoring-form-row">
             <div class="scoring-form-head" id="player-1-name">Name</div><label id="player-1-checkbox-label"
-              class="scoring-form-checkbox-label" for="player-1-checkbox"><input class="scoring-form-checkbox"
-                id="player-1-checkbox" type="checkbox">Lose</label>
+              class="scoring-form-checkbox-label" for="player-1-checkbox">Lose</label><input class="scoring-form-checkbox"
+              id="player-1-checkbox" type="checkbox">
           </div>
           <div class="scoring-form-row">
             <div class="scoring-form-head" id="player-2-name">Name</div><label id="player-2-checkbox-label"
-              class="scoring-form-checkbox-label" for="player-2-checkbox"><input class="scoring-form-checkbox"
-                id="player-2-checkbox" type="checkbox">Lose</label>
+              class="scoring-form-checkbox-label" for="player-2-checkbox">Lose</label><input class="scoring-form-checkbox"
+              id="player-2-checkbox" type="checkbox">
           </div>
           <div class="scoring-form-row">
             <div class="scoring-form-head" id="player-3-name">Name</div><label id="player-3-checkbox-label"
-              class="scoring-form-checkbox-label" for="player-3-checkbox"><input class="scoring-form-checkbox"
-                id="player-3-checkbox" type="checkbox">Lose</label>
+              class="scoring-form-checkbox-label" for="player-3-checkbox">Lose</label><input class="scoring-form-checkbox"
+              id="player-3-checkbox" type="checkbox">
           </div>
           <div class="scoring-form-row">
             <div class="scoring-form-head" id="player-4-name">Name</div><label id="player-4-checkbox-label"
-              class="scoring-form-checkbox-label" for="player-4-checkbox"><input class="scoring-form-checkbox"
-                id="player-4-checkbox" type="checkbox">Lose</label>
+              class="scoring-form-checkbox-label" for="player-4-checkbox">Lose</label><input class="scoring-form-checkbox"
+              id="player-4-checkbox" type="checkbox">
           </div>
           <div class="scoring-form-row">
             <div class="scoring-form-head" id="player-5-name">Name</div><label id="player-5-checkbox-label"
-              class="scoring-form-checkbox-label" for="player-5-checkbox"><input class="scoring-form-checkbox"
-                id="player-5-checkbox" type="checkbox">Lose</label>
+              class="scoring-form-checkbox-label" for="player-5-checkbox">Lose</label><input class="scoring-form-checkbox"
+              id="player-5-checkbox" type="checkbox">
           </div>
         </div>
       </div>
       <div class="section">
         <div id="ranking-preview-title" class="section-title">プレビュー</div>
-        <div id="ranking-preview">
+        <div id="ranking-preview-table">
           <div class="ranking-preview-row">
             <div class="ranking-preview-place">1st.</div>
             <div class="ranking-preview-name">Name</div>
@@ -131,7 +136,7 @@
     <div class="page" id="ranking" style="display: none;">
       <div class="section">
         <div class="section-title">ランキング</div>
-        <div id="ranking">
+        <div id="ranking-table">
           <div class="ranking-row">
             <div class="ranking-place">1st.</div>
             <div class="ranking-name">Name</div>
@@ -159,13 +164,17 @@
           </div>
         </div>
       </div>
+      <div class="section">
+        <div class="section-title"><small>このデバイスを得点管理係に<br>提出してください。</small></div>
+      </div>
     </div>
   </div>
   <div id="footer-button">
     <div class="wide-button" id="register-button">登録</div>
     <div class="left-button" id="slot-game-button">ミニゲーム</div>
-    <div class="wide-button" id="back-to-list-button">戻る</div>
-    <div class="right-button" id="go-to-ranking-button">ランキング</div>
+    <div class="left-button" id="back-to-list-button">戻る</div>
+    <div class="right-button" id="score-submit-button">スコアを確定</div>
+    <div class="right-button" id="go-to-ranking-button" style="touch-action: none;">ランキング</div>
     <div class="wide-button" id="reset-button">リスタート</div>
   </div>
   <script src="script.js"></script>

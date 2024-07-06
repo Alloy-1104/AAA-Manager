@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 
 * {
   padding: 0;
@@ -116,14 +116,35 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
 }
-#game-list-wrapper > * {
+#game-list-wrapper > div {
+  position: relative;
   border: 1px solid #000;
   height: 24vw;
   margin: 2vw 0;
   text-align: center;
   line-height: 24vw;
-  font-size: 6vw;
+  font-size: 8vw;
 }
+
+.done {
+  background-color: #aaa;
+  color:#555;
+}
+
+.done::after {
+  position: absolute;
+  content: "Done";
+  font-size:10vw;
+  left:0;
+  right: 0;
+  bottom:0;
+  top: 0;
+  height: 24vw;
+  line-height: 24vw;
+  color: #fff;
+  transform: rotate(-10deg);
+}
+
 
 /* Scoring Form */
 #scoring-form {
@@ -160,12 +181,11 @@ input[type="checkbox"] {
   font-size: 4vw;
 }
 .ranking-preview-name {
-  width: 40%;
+  width: 55%;
   text-align: left;
-  padding-left: 5vw;
 }
 .ranking-preview-score {
-  width: 40%;
+  width: 25%;
   text-align: right;
   font-size: 5vw;
   padding-right: 5vw;
@@ -229,17 +249,17 @@ input[type="checkbox"] {
 .ranking-place {
   width: 20%;
   text-align: center;
-  font-size: 6vw;
+  font-size: 5vw;
 }
 .ranking-name {
-  width: 40%;
+  width: 60%;
   text-align: left;
   padding-left: 5vw;
-  font-size: 6vw;
+  font-size: 5vw;
 }
 .ranking-score {
-  width: 40%;
+  width: 20%;
   text-align: right;
-  font-size: 6vw;
+  font-size: 5vw;
   padding-right: 5vw;
 }
