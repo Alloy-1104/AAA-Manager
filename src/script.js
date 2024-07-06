@@ -119,14 +119,19 @@ footer_back_to_list_button.addEventListener("click", () => {
 var long_tap;
 footer_go_to_ranking_button.addEventListener("pointerdown", () => {
   const ranking_interval_id = setTimeout(() => {
-    page_index = 3;
-    set_page();
-    submit_score();
+    if (done_count == 4) {
+      page_index = 3;
+      set_page();
+      submit_score();
+    } else {
+      alert("まだすべてのゲームが終わっていません。");
+    }
+
   }, 1000)
   document.addEventListener("pointerup", () => {
     clearInterval(ranking_interval_id);
     if (page_index != 3) {
-      alert("長押しで得点を確定させます。")
+      alert("長押しでランキングへ移ります。")
     }
   }, { once: true });
 });
