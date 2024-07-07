@@ -12,6 +12,10 @@
 body {
   width: 100%;
   height: 100%;
+  -webkit-touch-callout: none;
+  /* リンク長押しのポップアップを無効化 */
+  -webkit-user-select: none;
+  /* テキスト長押しの選択ボックスを無効化 */
 }
 
 #page-list {
@@ -28,11 +32,12 @@ body {
   background-size: 120vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+
 }
 
 
 .section {
+  margin-top: 15vw;
   width: 100vw;
   padding: 0 15vw;
   position: relative;
@@ -51,12 +56,13 @@ body {
 input[type="radio"] {
   display: none;
 }
+
 input[type="checkbox"] {
   display: none;
 }
 
 /* Registration form */
-#registration-input > .wrapper {
+#registration-input>.wrapper {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -68,7 +74,7 @@ input[type="checkbox"] {
   width: 100%;
 }
 
-#name-input-wrapper > * {
+#name-input-wrapper>* {
   width: 100%;
 }
 
@@ -80,7 +86,7 @@ input[type="checkbox"] {
   height: 10vw;
   line-height: 10vw;
   font-size: 5vw;
-  padding-left:2vw;
+  padding-left: 2vw;
   border: none;
   border-bottom: 1px solid #000;
   background-color: #fafafa;
@@ -93,7 +99,7 @@ input[type="checkbox"] {
 }
 
 .player-counter-radio-label {
-  position:absolute;
+  position: absolute;
   left: -12vw;
   top: 0;
   bottom: 0;
@@ -102,7 +108,7 @@ input[type="checkbox"] {
   width: 8vw;
   line-height: 8vw;
   color: #000;
-  margin:auto 1vw;
+  margin: auto 1vw;
   text-align: center;
   border: 1px solid #000;
 }
@@ -116,7 +122,8 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
 }
-#game-list-wrapper > div {
+
+#game-list-wrapper>div {
   position: relative;
   border: 1px solid #000;
   height: 24vw;
@@ -128,16 +135,16 @@ input[type="checkbox"] {
 
 .done {
   background-color: #aaa;
-  color:#555;
+  color: #555;
 }
 
 .done::after {
   position: absolute;
   content: "Done";
-  font-size:10vw;
-  left:0;
+  font-size: 10vw;
+  left: 0;
   right: 0;
-  bottom:0;
+  bottom: 0;
   top: 0;
   height: 24vw;
   line-height: 24vw;
@@ -150,6 +157,7 @@ input[type="checkbox"] {
 #scoring-form {
   border: 1px solid #000;
 }
+
 .scoring-form-row {
   display: flex;
   flex-direction: row;
@@ -157,10 +165,12 @@ input[type="checkbox"] {
   line-height: 12vw;
   text-align: center;
 }
+
 .scoring-form-head {
   width: 60%;
   border-right: 1px solid #000;
 }
+
 .scoring-form-checkbox-label {
   width: 40%;
 }
@@ -180,10 +190,12 @@ input[type="checkbox"] {
   text-align: center;
   font-size: 4vw;
 }
+
 .ranking-preview-name {
   width: 55%;
   text-align: left;
 }
+
 .ranking-preview-score {
   width: 25%;
   text-align: right;
@@ -205,29 +217,30 @@ input[type="checkbox"] {
   font-size: 4vw;
 }
 
-#footer-button > * {
+#footer-button>* {
   height: 100%;
 }
 
-#footer-button > .wide-button {
+#footer-button>.wide-button {
   width: 70vw;
   margin: 0 auto;
   border: 1px solid #000;
 }
 
-#footer-button > .center-button {
+#footer-button>.center-button {
   width: 30vw;
   margin: 0 auto;
   border: 1px solid #000;
 }
 
-#footer-button > .right-button {
+#footer-button>.right-button {
   width: 30vw;
   position: absolute;
   right: 0;
   border: 1px solid #000;
 }
-#footer-button > .left-button {
+
+#footer-button>.left-button {
   width: 30vw;
   position: absolute;
   left: 0;
@@ -251,12 +264,14 @@ input[type="checkbox"] {
   text-align: center;
   font-size: 5vw;
 }
+
 .ranking-name {
   width: 60%;
   text-align: left;
   padding-left: 5vw;
   font-size: 5vw;
 }
+
 .ranking-score {
   width: 20%;
   text-align: right;
