@@ -80,7 +80,9 @@ input[type="checkbox"] {
 
 .name-input-label {
   height: 8vw;
+  font-size: 4vw;
 }
+
 
 .name-input {
   height: 10vw;
@@ -111,6 +113,7 @@ input[type="checkbox"] {
   margin: auto 1vw;
   text-align: center;
   border: 1px solid #000;
+  font-size: 4vw;
 }
 
 .player-counter-radio-label:has(.player-counter-radio:checked) {
@@ -163,12 +166,14 @@ input[type="checkbox"] {
   flex-direction: row;
   height: 8vw;
   line-height: 8vw;
+  font-size: 4vw;
   text-align: center;
 }
 
 .scoring-form-head {
   width: 60%;
   border-right: 1px solid #000;
+  font-size: 4vw;
 }
 
 .scoring-form-checkbox-label {
@@ -183,6 +188,7 @@ input[type="checkbox"] {
   padding-top: 3vw;
   padding-bottom: 1vw;
   border-bottom: 1px solid #000;
+  font-size: 4vw;
 }
 
 .ranking-preview-place {

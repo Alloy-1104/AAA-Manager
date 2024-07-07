@@ -128,7 +128,7 @@ footer_go_to_ranking_button.addEventListener("pointerdown", () => {
       alert("まだすべてのゲームが終わっていません。");
       undone = true;
     }
-  }, 1000)
+  }, 500)
 
   const ranking_up_interval_id = document.addEventListener("pointerup", () => {
     clearInterval(ranking_interval_id);
@@ -183,7 +183,7 @@ footer_score_submit_button.addEventListener("pointerdown", () => {
     page_index = 1;
     set_page();
     submit_score();
-  }, 1000)
+  }, 500)
   document.addEventListener("pointerup", () => {
     clearInterval(submit_interval_id);
     if (page_index != 1) {
