@@ -126,10 +126,10 @@ input[type="checkbox"] {
 #game-list-wrapper>div {
   position: relative;
   border: 1px solid #000;
-  height: 24vw;
+  height: 18vw;
   margin: 2vw 0;
   text-align: center;
-  line-height: 24vw;
+  line-height: 18vw;
   font-size: 8vw;
 }
 
@@ -161,8 +161,8 @@ input[type="checkbox"] {
 .scoring-form-row {
   display: flex;
   flex-direction: row;
-  height: 12vw;
-  line-height: 12vw;
+  height: 8vw;
+  line-height: 8vw;
   text-align: center;
 }
 

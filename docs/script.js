@@ -62,13 +62,13 @@ function set_page() {
   const player_5_input_elm = document.getElementById("player-5-input");
   if (player_1_input_elm.innerHTML) player_data[0].name = player_1_input_elm.innerHTML;
   else player_data[0].name = "プレイヤー1";
-  if (player_1_input_elm.innerHTML) player_data[1].name = player_1_input_elm.innerHTML;
+  if (player_2_input_elm.innerHTML) player_data[1].name = player_2_input_elm.innerHTML;
   else player_data[1].name = "プレイヤー2";
-  if (player_1_input_elm.innerHTML) player_data[2].name = player_1_input_elm.innerHTML;
+  if (player_3_input_elm.innerHTML) player_data[2].name = player_3_input_elm.innerHTML;
   else player_data[2].name = "プレイヤー3";
-  if (player_1_input_elm.innerHTML) player_data[3].name = player_1_input_elm.innerHTML;
+  if (player_4_input_elm.innerHTML) player_data[3].name = player_4_input_elm.innerHTML;
   else player_data[3].name = "プレイヤー4";
-  if (player_1_input_elm.innerHTML) player_data[4].name = player_1_input_elm.innerHTML;
+  if (player_5_input_elm.innerHTML) player_data[4].name = player_5_input_elm.innerHTML;
   else player_data[4].name = "プレイヤー5";
 
   // sync data
