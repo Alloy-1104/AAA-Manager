@@ -81,6 +81,7 @@ input[type="checkbox"] {
 .name-input-label {
   height: 8vw;
   font-size: 4vw;
+  line-height: 8vw;
 }
 
 
@@ -133,7 +134,7 @@ input[type="checkbox"] {
   margin: 2vw 0;
   text-align: center;
   line-height: 18vw;
-  font-size: 8vw;
+  font-size: 4vw;
 }
 
 .done {
@@ -149,8 +150,8 @@ input[type="checkbox"] {
   right: 0;
   bottom: 0;
   top: 0;
-  height: 24vw;
-  line-height: 24vw;
+  height: 18vw;
+  line-height: 18vw;
   color: #fff;
   transform: rotate(-10deg);
 }
@@ -205,8 +206,9 @@ input[type="checkbox"] {
 .ranking-preview-score {
   width: 25%;
   text-align: right;
-  font-size: 5vw;
+  font-size: 4vw;
   padding-right: 5vw;
+  font-weight: bold;
 }
 
 /* Footer Button */
