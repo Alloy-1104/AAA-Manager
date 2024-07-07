@@ -1,4 +1,4 @@
-var page_list = ["registration", "game_list", "game_scoring", "result"]
+var page_list = ["registration", "game_list", "game_scoring", "result", "mini_game"]
 var page_index;
 
 var game_list = ["poker", "black_jack", "darts", "roulette"];
@@ -12,7 +12,8 @@ const footer_button_elms = document.getElementById("footer-button");
 const footer_button_list = footer_button_elms.children;
 // Button action
 const footer_register_button = document.getElementById("register-button");
-const footer_slot_game_button = document.getElementById("slot-game-button");
+const footer_mini_game_button = document.getElementById("mini-game-button");
+const footer_mini_game_back_button = document.getElementById("mini-game-back-button");
 const footer_back_to_list_button = document.getElementById("back-to-list-button");
 const footer_go_to_ranking_button = document.getElementById("go-to-ranking-button");
 const footer_score_submit_button = document.getElementById("score-submit-button");
@@ -43,7 +44,7 @@ function set_page() {
       footer_register_button.style.display = "block";
       break;
     case 1:
-      footer_slot_game_button.style.display = "block";
+      footer_mini_game_button.style.display = "block";
       footer_go_to_ranking_button.style.display = "block";
       break;
     case 2:
@@ -52,6 +53,9 @@ function set_page() {
       break;
     case 3:
       reset_button_button.style.display = "block";
+      break;
+    case 4:
+      footer_mini_game_back_button.style.display = "block";
       break;
   }
   // set player name
@@ -174,6 +178,17 @@ function submit_score() {
     document.getElementById("done-note").style.display = "block";
   }
 }
+
+// Mini game
+footer_mini_game_button.addEventListener("click", () => {
+  page_index = 4;
+  set_page();
+});
+
+footer_mini_game_back_button.addEventListener("click", () => {
+  page_index = 1;
+  set_page();
+});
 
 
 // Submit score
