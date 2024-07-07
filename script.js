@@ -128,6 +128,7 @@ footer_go_to_ranking_button.addEventListener("pointerdown", () => {
       page_index = 3;
       set_page();
       submit_score();
+      sync_score_ranking();
     } else {
       alert("まだすべてのゲームが終わっていません。");
       undone = true;
