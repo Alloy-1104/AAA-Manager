@@ -278,41 +278,53 @@ result_table.addEventListener("click", () => {
 });
 
 function sync_table_to_player_data() {
+  let win_color = "#44aa44"
+  let lose_color = "#4444aa"
   let current_game = game_list[game_index];
   if (player_1_checkbox.checked) {
     player_1_checkbox_label.innerHTML = "Win";
+    player_1_checkbox_label.style.color = win_color;
     player_data[0][current_game] = true;
   } else {
     player_1_checkbox_label.innerHTML = "Lose";
     player_data[0][current_game] = false;
+    player_1_checkbox_label.style.color = lose_color;
   }
   if (player_2_checkbox.checked) {
     player_2_checkbox_label.innerHTML = "Win";
     player_data[1][current_game] = true;
+    player_2_checkbox_label.style.color = win_color;
   } else {
     player_2_checkbox_label.innerHTML = "Lose";
     player_data[1][current_game] = false;
+    player_2_checkbox_label.style.color = lose_color;
   }
   if (player_3_checkbox.checked) {
     player_3_checkbox_label.innerHTML = "Win";
     player_data[2][current_game] = true;
+    player_3_checkbox_label.style.color = win_color;
   } else {
     player_3_checkbox_label.innerHTML = "Lose";
     player_data[2][current_game] = false;
+    player_3_checkbox_label.style.color = lose_color;
   }
   if (player_4_checkbox.checked) {
     player_4_checkbox_label.innerHTML = "Win";
     player_data[3][current_game] = true;
+    player_4_checkbox_label.style.color = win_color;
   } else {
     player_4_checkbox_label.innerHTML = "Lose";
     player_data[3][current_game] = false;
+    player_4_checkbox_label.style.color = lose_color;
   }
   if (player_5_checkbox.checked) {
     player_5_checkbox_label.innerHTML = "Win";
     player_data[4][current_game] = true;
+    player_5_checkbox_label.style.color = win_color;
   } else {
     player_5_checkbox_label.innerHTML = "Lose";
     player_data[4][current_game] = false;
+    player_5_checkbox_label.style.color = lose_color;
   }
 }
 
